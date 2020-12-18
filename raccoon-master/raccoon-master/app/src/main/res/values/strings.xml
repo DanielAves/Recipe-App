@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">RecipeApp</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="action_settings">Action Settings</string>
+    <string name="cupboard_recipes">Cupboard Recipes</string>
+    <string name="cupboard_recipes_info">Enter the ingredients in your cupboard below, and find out what recipes you can make with them</string>
+    <string name="ingredients_button">Find Your Recipes</string>
+    <string name = "chicken">e.g. chicken</string>
+    <string name="search">Search</string>
+    <string name="add_ingredient">Add Ingredients to Shopping List</string>
+
+    <string name="diet_prompt">Choose your diet</string>
+    <string name="search_for_ingredients">Search for recipes by their ingredients</string>
+    <string name="ingredient">Ingredient</string>
+
+    <string-array name="diet_arrays">
+        <item></item>
+        <item>Balanced</item>
+        <item>High-protein</item>
+        <item>High-fiber</item>
+        <item>Low-fat</item>
+        <item>Low-carb</item>
+        <item>Low-sodium</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

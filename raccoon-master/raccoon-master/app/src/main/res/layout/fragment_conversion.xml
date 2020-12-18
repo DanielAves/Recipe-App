@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.ConversionFragment"
+    android:orientation="vertical"
+    android:background="#e8fdff">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/MetricConverter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"
+                android:text="Metric Converter"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.46"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/from1"
+                android:layout_width="98dp"
+                android:layout_height="51dp"
+                android:layout_below="@id/MetricConverter"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="From:"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <Space
+                android:id="@+id/spaceFrom"
+                android:layout_width="1dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/from1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+            </Space>
+
+            <EditText
+                android:id="@+id/weightInput"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_toLeftOf="@id/spaceFrom"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/from1"
+                android:hint="Enter value"
+                android:layout_marginRight="20dp"
+                android:inputType="number"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints" />
+
+            <Spinner
+                android:id="@+id/sp_from"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:padding="20dp"
+                android:layout_below="@id/from1"
+                android:layout_toRightOf="@id/spaceFrom" />
+
+            <TextView
+                android:id="@+id/to"
+                android:layout_width="90dp"
+                android:layout_height="54dp"
+                android:layout_below="@id/weightInput"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="To:"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/sp_to"
+                android:layout_width="225dp"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/to" />
+
+            <TextView
+                android:id="@+id/resultHeader"
+                android:layout_width="96dp"
+                android:layout_height="52dp"
+                android:layout_below="@id/sp_to"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Result:"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="148dp"
+                android:layout_height="47dp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/resultHeader"
+                android:padding="5dp"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/convert1"
+                android:layout_width="214dp"
+                android:layout_height="38dp"
+                android:layout_below="@id/result"
+                android:layout_marginTop="50dp"
+                android:layout_centerHorizontal="true"
+                android:background="#FF0E4DE4"
+                android:padding="5dp"
+                android:text="Convert"
+                android:textColor="#FFFFFF"
+                android:textColorHighlight="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textColorLink="#FFFFFF" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

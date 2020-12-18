@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecipeDetailsActivity"
+    android:background="#e8fdff">
+
+    <ImageButton
+        android:id="@+id/backButtonRD"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/Buttons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent="0.15"
+        app:srcCompat="@drawable/backbutton"
+        android:tint="#FFFFFF"/>
+
+    <Button
+        android:id="@+id/viewMethod"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/Buttons"
+        android:drawableRight="@drawable/open_in_browser"
+        android:tint="#FFFFFF"
+        android:gravity="left|center_vertical"
+        android:text="   View Method"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.001"
+        app:layout_constraintWidth_percent="0.40"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView2"
+        android:layout_width="380dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.82"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.575"
+        app:layout_constraintWidth_percent="0.95">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/recipeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/recipeDetailsPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/recipeTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                app:layout_constraintHeight_percent="0.30"
+                app:layout_constraintWidth_percent="0.80"
+                app:srcCompat="@drawable/food" />
+
+            <TextView
+                android:id="@+id/ingredientsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recipeDetailsPhoto"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dp"
+                android:text="Ingredients"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/servings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ingredientsTitle"
+                android:layout_gravity="left"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/caloriesTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recipeDetailsPhoto"
+                android:layout_alignRight="@id/ingredientsTitle"
+                android:layout_marginTop="5dp"
+                android:text="Total Calories"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/calories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/caloriesTitle"
+                android:layout_alignRight="@id/ingredientsTitle"
+                android:layout_gravity="center"
+                android:textSize="18sp" />
+
+            <GridView
+                android:id="@+id/ingredientGrid"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/servings"
+                android:layout_marginTop="10dp"
+                android:nestedScrollingEnabled="true"
+                android:numColumns="1" />
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/addIngButton"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:background="@color/Buttons"
+        android:text="@string/add_ingredient"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
